@@ -1,0 +1,14 @@
+<resources>
+
+    <style name="Widget.Theme.Localfoodoasis.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.Localfoodoasis.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat">
+    </style>
+</resources>

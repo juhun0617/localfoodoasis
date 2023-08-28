@@ -1,11 +1,13 @@
 package com.example.localfoodoasis;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
@@ -57,11 +59,18 @@ public class FruitFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+
         View view = inflater.inflate(R.layout.fragment_fruit, container, false);
 
         ImageView melonImageView = view.findViewById(R.id.melonImage);
@@ -88,7 +97,31 @@ public class FruitFragment extends Fragment {
                 .apply(new RequestOptions().transform(new RoundedCorners(20)))
                 .into(blueberryImageView);
 
+        ImageView kmelonImageView = view.findViewById(R.id.kmelonImage);
+        Glide.with(this)
+                .load(R.drawable.kmelon)
+                .apply(new RequestOptions().transform(new RoundedCorners(20)))
+                .into(kmelonImageView);
+
+        ImageView plumImageView = view.findViewById(R.id.plumImage);
+        Glide.with(this)
+                .load(R.drawable.plum)
+                .apply(new RequestOptions().transform(new RoundedCorners(20)))
+                .into(plumImageView);
+
+        ConstraintLayout watermelonButton = (ConstraintLayout) view.findViewById(R.id.watermelonButton);
+
+        watermelonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),watermelon.class);
+                startActivity(intent);
+            }
+        });
         // Inflate the layout for this fragment
         return view;
     }
+
+
+
 }

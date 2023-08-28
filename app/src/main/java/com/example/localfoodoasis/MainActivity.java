@@ -22,10 +22,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        findViewById(R.id.logoBack).bringToFront();
+        findViewById(R.id.imageView2).bringToFront();
+        findViewById(R.id.searchView2).bringToFront();
+
+
+
+
+
         fruitFragment = new FruitFragment();
         vegetableFragment = new VegetableFragment();
         seafoodFragment = new SeafoodFragment();
         meatFragment = new MeatFragment();
+
+
+
 
         if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fruitFragment).commit();

@@ -254,8 +254,9 @@
             android:background="#BDBDBD"
             app:layout_constraintTop_toTopOf="parent"/>
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@id/home"
+            android:id="@+id/home"
             android:layout_width="0dp"
+            android:clickable="true"
             android:layout_height="match_parent"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintTop_toTopOf="parent"

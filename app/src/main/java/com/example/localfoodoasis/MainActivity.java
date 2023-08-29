@@ -1,5 +1,6 @@
 package com.example.localfoodoasis;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.SearchView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -108,6 +110,18 @@ public class MainActivity extends AppCompatActivity {
                 indicatorVegetable.setVisibility(View.GONE);
             }
         });
+
+        ConstraintLayout home = findViewById(R.id.shop);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, recommend.class);
+                startActivity(intent);
+
+
+            }
+        });
+
 
         SearchView searchView = findViewById(R.id.searchView2);
         int searchIconId = searchView.getContext().getResources().getIdentifier("android:id/search_mag_icon", null, null);

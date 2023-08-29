@@ -3,14 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView
+    <androidx.cardview.widget.CardView
         android:id="@+id/list_image"
         android:layout_width="160dp"
         android:layout_height="100dp"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="30dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="centerCrop"/>
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/imageViewRounded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,7 +33,7 @@
         app:layout_constraintStart_toEndOf="@id/list_image"
         android:layout_marginStart="20dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="18dp"
         android:textColor="@color/black"
 
     />
@@ -124,7 +136,7 @@
         android:textSize="12dp"
         android:fontFamily="@font/scdream3"
         app:layout_constraintStart_toEndOf="@id/number_index"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="1dp"
         app:layout_constraintTop_toBottomOf="@id/day_index"
         android:layout_marginTop="1dp"
         />

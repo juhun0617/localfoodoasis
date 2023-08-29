@@ -25,7 +25,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         public ViewHolder(View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.list_image);
+            imageView = itemView.findViewById(R.id.imageViewRounded);
             price = itemView.findViewById(R.id.price);
             maker = itemView.findViewById(R.id.maker);
             address = itemView.findViewById(R.id.address);

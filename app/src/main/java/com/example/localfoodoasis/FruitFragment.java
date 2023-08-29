@@ -116,6 +116,7 @@ public class FruitFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),watermelon.class);
                 startActivity(intent);
+
             }
         });
         // Inflate the layout for this fragment

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="shop_list">
+        <item>옐로우시티장성로컬푸드직매장</item>
+        <item>농협하나로광천점</item>
+    </string-array>
+</resources>

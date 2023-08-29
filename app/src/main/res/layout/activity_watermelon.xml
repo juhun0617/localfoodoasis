@@ -6,4 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".watermelon">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="추천"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/scdream5"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="40dp"
+        android:textColor="#000000"/>
+    <TextView
+        android:id="@+id/recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:text="추천상품 >"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="130dp"
+        android:textSize="21dp"
+        android:fontFamily="@font/scdream3"
+        android:textColor="#000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/recommend"
+        android:layout_marginStart="20dp"
+        android:text="수박"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="130dp"
+        android:textSize="21dp"
+        android:fontFamily="@font/scdream5"
+        android:textColor="#000000"/>
+
+    <Spinner
+        android:id="@+id/spiner"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/shop_list"
+        app:layout_constraintTop_toTopOf="@id/recommend"
+        app:layout_constraintBottom_toBottomOf="@id/recommend"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="2dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/recommend"
+        android:layout_marginTop="30dp"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
